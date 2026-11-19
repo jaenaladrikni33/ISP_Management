@@ -1,0 +1,17 @@
+{
+  "name": "ISP_Management — Billing & ISP Manager",
+  "short_name": "ISP_Management",
+  "description": "Aplikasi billing dan manajemen pelanggan ISP ISP_Management",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1228",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
