@@ -212,7 +212,7 @@ function settingRecord(PDO $db): array
         return json_decode($record['data'], true) ?: [];
     }
 
-    if ((int)$db->query("SELECT GET_LOCK('lenet_default_settings', 5)")->fetchColumn() !== 1) {
+    if ((int)$db->query("SELECT GET_LOCK('isp_management_default_settings', 5)")->fetchColumn() !== 1) {
         fail('Pengaturan aplikasi sedang dibuat. Coba lagi.', 503);
     }
 
@@ -249,7 +249,7 @@ function settingRecord(PDO $db): array
         $insert->execute(['AppSetting', $id, json_encode($defaults, JSON_UNESCAPED_UNICODE), $timestamp, $timestamp]);
         return $defaults;
     } finally {
-        $db->query("SELECT RELEASE_LOCK('lenet_default_settings')");
+        $db->query("SELECT RELEASE_LOCK('isp_management_default_settings')");
     }
 }
 
@@ -500,7 +500,7 @@ function createAccount(PDO $db, string $email, string $password, string $fullNam
     if (strlen($password) < 8) {
         fail('Kata sandi harus memiliki minimal 8 karakter.');
     }
-    if ((int)$db->query("SELECT GET_LOCK('lenet_account_creation', 5)")->fetchColumn() !== 1) {
+    if ((int)$db->query("SELECT GET_LOCK('isp_management_account_creation', 5)")->fetchColumn() !== 1) {
         fail('Tidak dapat membuat akun sekarang. Coba lagi.', 503);
     }
 
@@ -537,7 +537,7 @@ function createAccount(PDO $db, string $email, string $password, string $fullNam
         }
         throw $error;
     } finally {
-        $db->query("SELECT RELEASE_LOCK('lenet_account_creation')");
+        $db->query("SELECT RELEASE_LOCK('isp_management_account_creation')");
     }
 }
 

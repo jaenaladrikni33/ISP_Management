@@ -11,7 +11,7 @@ ISP_Management Billing berjalan menggunakan backend PHP/MySQL lokal melalui Lara
 ## Penyiapan awal di Laragon
 
 1. Jalankan Apache dan MySQL dari Laragon.
-2. Di phpMyAdmin, impor [`database/schema.sql`](./database/schema.sql). File ini membuat database `leanet_local` beserta tabel-tabelnya.
+2. Di phpMyAdmin, impor [`database/schema.sql`](./database/schema.sql). File ini membuat database `ISP_Management` beserta tabel-tabelnya.
 3. Salin `public/api/config.example.php` ke folder utama proyek dengan nama `config.local.php`. Untuk pengaturan Laragon bawaan, nilai contoh menggunakan pengguna MySQL `root` tanpa kata sandi.
 4. Jika Laragon menggunakan nama virtual host yang berbeda, ubah `app_url` di `config.local.php`. Kemudian, pasang paket yang diperlukan:
 

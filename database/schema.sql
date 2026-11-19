@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS lenet_local
+CREATE DATABASE IF NOT EXISTS ISP_Management
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE lenet_local;
+USE ISP_Management;
 
 CREATE TABLE IF NOT EXISTS app_users (
   id CHAR(36) NOT NULL PRIMARY KEY,
