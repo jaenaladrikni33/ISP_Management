@@ -32,7 +32,7 @@ export default function AuthLayout({
                 alt={companyName}
                 className="h-12 w-12 rounded-xl border border-slate-100 bg-white object-contain p-1 shadow-sm"
                 onError={(event) => {
-                  event.currentTarget.src = `${appBasePath}favicon.svg`;
+                  event.currentTarget.src = `${appBasePath}favicon.jpg`;
                 }}
               />
             ) : (

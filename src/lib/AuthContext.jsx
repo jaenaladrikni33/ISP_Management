@@ -6,7 +6,7 @@ function applyPublicBranding(response) {
   const companyName = settings.company_name?.trim() || "ISP_Management";
   const logoUrl = settings.company_logo_file_id
     ? localApi.app.companyLogoUrl(settings.company_logo_file_id)
-    : `${appBasePath}favicon.svg`;
+    : `${appBasePath}favicon.jpg`;
 
   document.title = `${companyName} — Billing & ISP Manager`;
   document

@@ -135,7 +135,7 @@ export default function Settings() {
 
   const logoSrc = companyLogoFileId
     ? localApi.app.companyLogoUrl(companyLogoFileId)
-    : `${appBasePath}favicon.svg`;
+    : `${appBasePath}favicon.jpg`;
 
   return (
     <div>
@@ -165,7 +165,7 @@ export default function Settings() {
                   alt="Pratinjau logo aplikasi"
                   className="h-full w-full object-contain"
                   onError={(event) => {
-                    event.currentTarget.src = `${appBasePath}favicon.svg`;
+                    event.currentTarget.src = `${appBasePath}favicon.jpg`;
                   }}
                 />
               </div>

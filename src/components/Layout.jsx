@@ -68,7 +68,7 @@ export default function Layout() {
     "ISP_Management";
   const logoSrc = branding.company_logo_file_id
     ? localApi.app.companyLogoUrl(branding.company_logo_file_id)
-    : `${appBasePath}favicon.svg`;
+    : `${appBasePath}favicon.jpg`;
 
   useEffect(() => {
     localApi.entities.AppSetting.list()
